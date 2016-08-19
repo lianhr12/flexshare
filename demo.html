@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{padding: 0;margin: 0}
+		.box{
+			width: 800px;
+			margin: 150px auto 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<a href="javascript:share.weibo();">新浪微博</a>
+		<a href="javascript:share.qzone();">QQ空间</a>
+		<a href="javascript:share.qq();">QQ</a>
+		<a href="javascript:share.tqq();">腾讯微博</a>
+		<a href="javascript:share.renren();">人人</a>
+		<a href="javascript:share.douban();">豆瓣</a>
+		<a href="javascript:share.facebook();">facebook</a>
+		<a href="javascript:share.twitter();">twitter</a>
+		<a href="javascript:share.linkedin();">linkedin</a>
+		<a href="javascript:share.weixin();">微信</a>
+		<a href="javascript:share.tieba();">贴吧</a>
+		<a href="javascript:share.google();">google</a>
+		<a href="javascript:share.vk()">vk</a>
+		<a href="javascript:share.ishou()">搜狐微博</a>
+	</div>
+
+	<script src="tk_share.js"></script>
+	<script>
+		var share = new Tk_share();
+		share.init({
+			url : 'https://www.17track.net',
+            title : '全球物流查询平台 | 17TRACK',
+            description : '全球物流查询平台 | 17TRACK" /><meta itemprop="description" content="17TRACK 全球物流查询平台，覆盖世界上大多数国家，提供功能先进的国际快递，邮政包裹查询跟踪服务，包括全球邮政包裹、国际包裹、国际快递、TNT、UPS、DHL、FEDEX、GLS、ARAMEX等。',
+            pic : 'https://www.17track.net/oauth_image/share.png'
+		})
+	</script>
+</html>
