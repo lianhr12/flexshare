@@ -18,7 +18,7 @@ function Tk_share(){
 		url : this.url,
 		title : this.title,
 		description : this.description,
-		pic : 'https://www.17track.net/oauth_image/share.png'
+		pic : 'your img url'
 	}
 
 	// 各大社交分享链接URL及参数
