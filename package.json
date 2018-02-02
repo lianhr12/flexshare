@@ -1,0 +1,38 @@
+{
+  "name": "flexshare",
+  "version": "1.0.0",
+  "description": "More flexible web custom sharing plug-ins",
+  "main": "dist/flexshare.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-latest": "^6.24.1",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-commonjs": "^8.3.0",
+    "rollup-plugin-node-resolve": "^3.0.2",
+    "rollup-plugin-uglify": "^3.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "rollup -c -w",
+    "build": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lianhr12/flexshare.git"
+  },
+  "keywords": [
+    "quick",
+    "share",
+    "plugin"
+  ],
+  "author": "rope (lhr9311@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lianhr12/flexshare/issues"
+  },
+  "homepage": "https://github.com/lianhr12/flexshare#readme"
+}
