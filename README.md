@@ -1,52 +1,56 @@
 # flexshare
+___
 
 > 更加灵活的web自定义分享插件，纯Javascript插件，配置简单，样式可高度自定义
 
-使用方式：
+### 快速上手
 
-1、引入分享插件
-        
-    <script src="./tk_share.js"></script>
+#### 1、引入分享插件
+ 
+```html
+    <script src="./dist/flexshare.js"></script>
+```
 
+#### 2、配置参数
 
-2、配置参数：
-    
-    <script type="text/javascript">
-        
-        var share = new Tk_share();
-        share.init({
-            // 设置弹窗的窗口宽高，这里不用加单位
-            width: 450,
-            height: 500,
-            // 分享的完整url地址
-            url : 'https://www.baidu.com',
-            // 分享标题
-            title : '百度搜索',
-            // 分享内容描述
-            description : '百度一下，你就知道',
-            // 分享的图片地址，建议使用完整的url地址
-            pic : 'http://img0.imgtn.bdimg.com/it/u=3248586135,4175343721&fm=21&gp=0.jpg'
-        })
-    </script>
-3、调用方式：
-    
-    <div class="box">
-        <a href="javascript:share.weibo();">weibo</a>
-        <a href="javascript:share.qzone();">qzone</a>
-        <a href="javascript:share.tqq();">tqq</a>
-        <a href="javascript:share.renren();">renren</a>
-        <a href="javascript:share.douban();">douban</a>
-        <a href="javascript:share.facebook();">facebook</a>
-        <a href="javascript:share.twitter();">twitter</a>
-        <a href="javascript:share.linkedin();">linkedin</a>
-        <a href="javascript:share.weixin();">weixin</a>
-        <a href="javascript:share.tieba();">tieba</a>
-        <a href="javascript:share.google();">google</a>
-        <a href="javascript:share.vk()">vk</a>
-        <a href="javascript:share.ishou()">sohu</a>
-    </div>
+```javascript
+   <script src="../dist/flexshare.min.js"></script>
+   <script>
+       var flexShare = new FlexShare({
+           title: '前端技术博客',                      // 分享标题
+           desc : '分享生活点滴',                      // 分享内容
+           url  : 'https://www.hrope.cn',            // 分享URL地址
+           pic  : 'https://www.baidu.com/share.png', // 分享图片
+           isOpenDialog: true,                       // 是否新窗口打开分享页面
+           dialog      : {                           // 跟isOpenDialog关联，开启后可配置窗口大小设置
+               width : 570,
+               height: 520
+           }
+       });
+   </script>
+```
+#### 3、调用方式
 
-目前支持的分享社交平台：
+```html 
+     <ul class="share-container">
+        <li><a href="javascript:flexShare.socialShare('weibo');">新浪微博</a></li>
+        <li><a href="javascript:flexShare.socialShare('qzone');">QQ空间</a></li>
+        <li><a href="javascript:flexShare.socialShare('qq');">QQ</a></li>
+        <li><a href="javascript:flexShare.socialShare('tqq');">腾讯微博</a></li>
+        <li><a href="javascript:flexShare.socialShare('renren');">人人</a></li>
+        <li><a href="javascript:flexShare.socialShare('douban');">豆瓣</a></li>
+        <li><a href="javascript:flexShare.socialShare('facebook');">facebook</a></li>
+        <li><a href="javascript:flexShare.socialShare('twitter');">twitter</a></li>
+        <li><a href="javascript:flexShare.socialShare('linkedin');">linkedin</a></li>
+        <li><a href="javascript:flexShare.socialShare('weixin');">微信</a></li>
+        <li><a href="javascript:flexShare.socialShare('tieba');">贴吧</a></li>
+        <li><a href="javascript:flexShare.socialShare('google');">google</a></li>
+        <li><a href="javascript:flexShare.socialShare('vk');">vk</a></li>
+        <li><a href="javascript:flexShare.socialShare('ishou');">搜狐微博</a></li>
+    </ul>
+```
+
+### 目前支持的分享社交平台
 - 新浪微博
 - 搜狐微博
 - QQ
