@@ -21,7 +21,8 @@
   },
   "scripts": {
     "dev": "rollup -c -w",
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "doc": "node scripts/jsdoc-build.js"
   },
   "repository": {
     "type": "git",
