@@ -1,28 +1,43 @@
 {
   "name": "flexshare",
-  "version": "1.0.0",
+  "version": "0.2.1",
   "description": "More flexible web custom sharing plug-ins",
-  "main": "dist/flexshare.js",
+  "main": "dist/index.js",
+  "jsnext:main": "dist/index.es.js",
+  "module": "dist/index.es.js",
+  "sideEffects": false,
   "directories": {
     "doc": "doc"
   },
   "dependencies": {
-    "babel-core": "^6.26.0",
-    "babel-plugin-external-helpers": "^6.22.0",
-    "babel-preset-latest": "^6.24.1",
-    "jsdoc-to-markdown": "^4.0.1",
-    "rollup-plugin-babel": "^3.0.3",
-    "rollup-plugin-commonjs": "^8.3.0",
-    "rollup-plugin-node-resolve": "^3.0.2",
-    "rollup-plugin-uglify": "^3.0.0"
+    "babel-core": "6.26.0",
+    "babel-plugin-transform-runtime": "6.23.0",
+    "babel-preset-env": "1.6.1",
+    "es5-shim": "4.5.10",
+    "eslint": "4.18.2",
+    "jsdoc-to-markdown": "4.0.1",
+    "rollup": "0.57.1",
+    "rollup-plugin-babel": "3.0.3",
+    "rollup-plugin-commonjs": "8.3.0",
+    "rollup-plugin-node-resolve": "3.0.2",
+    "rollup-plugin-uglify": "3.0.0"
   },
   "devDependencies": {
-    "fs-extra": "^5.0.0"
+    "babel-runtime": "6.26.0",
+    "fs-extra": "5.0.0"
   },
   "scripts": {
     "dev": "rollup -c -w",
-    "build": "rollup -c",
-    "doc": "node scripts/jsdoc-build.js"
+    "doc": "node scripts/jsdoc-build.js",
+    "clean": "rm -rf ./dist",
+    "lint": "./node_modules/.bin/eslint -c ./scripts/.eslintrc.js src",
+    "build:self": "./node_modules/.bin/rollup -c ./scripts/rollup.config.js",
+    "build:es": "./node_modules/.bin/rollup -c ./scripts/rollup.config.es.js",
+    "build:umd": "./node_modules/.bin/rollup -c ./scripts/rollup.config.umd.js",
+    "build:umd_min": "./node_modules/.bin/rollup -c ./scripts/rollup.config.umd.min.js",
+    "build": "npm run clean && npm run build:self && npm run build:es && npm run build:umd && npm run build:umd_min",
+    "test": "npm run lint && npm run build && mocha",
+    "release": "npm test && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags"
   },
   "repository": {
     "type": "git",
