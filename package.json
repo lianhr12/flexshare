@@ -36,7 +36,7 @@
     "build:umd": "./node_modules/.bin/rollup -c ./scripts/rollup.config.umd.js",
     "build:umd_min": "./node_modules/.bin/rollup -c ./scripts/rollup.config.umd.min.js",
     "build": "npm run clean && npm run build:self && npm run build:es && npm run build:umd && npm run build:umd_min",
-    "test": "npm run lint && npm run build && mocha",
+    "test": "npm run lint && npm run build",
     "release": "npm test && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags"
   },
   "repository": {
