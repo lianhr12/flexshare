@@ -7,6 +7,7 @@
     <title>快速分享网页内容</title>
 </head>
 <body>
+    <script src="../dist/index.umd.min.js"></script>
     <ul class="share-container">
         <li><a href="javascript:flexShare.socialShare('weibo');">新浪微博</a></li>
         <li><a href="javascript:flexShare.socialShare('qzone');">QQ空间</a></li>
@@ -24,13 +25,12 @@
         <li><a href="javascript:flexShare.socialShare('ishou');">搜狐微博</a></li>
     </ul>
 
-    <script src="../dist/flexshare.min.js"></script>
     <script>
-        var flexShare = new FlexShare({
+        var flexShare = new flexshare({
             title: '前端技术博客',
             desc : '分享生活点滴',
-            url  : 'https://www.hrope.cn',
-            pic  : 'https://www.baidu.com/share.png',
+            url  : 'https://blog.hrope.cn',            // 分享URL地址
+            pic  : 'https://res.hrope.cn/blog/page_background.jpg',
             isOpenDialog: true
         });
        

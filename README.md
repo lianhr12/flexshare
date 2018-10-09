@@ -15,11 +15,11 @@
 ```html
 <script src="../dist/flexshare.min.js"></script>
 <script>
-   var flexShare = new FlexShare({
+   var flexShare = new flexshare({
        title: '前端技术博客',                      // 分享标题
        desc : '分享生活点滴',                      // 分享内容
-       url  : 'https://www.hrope.cn',            // 分享URL地址
-       pic  : 'https://www.baidu.com/share.png', // 分享图片
+       url  : 'https://blog.hrope.cn',            // 分享URL地址
+       pic  : 'https://res.hrope.cn/blog/page_background.jpg', // 分享图片
        isOpenDialog: true,                       // 是否新窗口打开分享页面
        dialog      : {                           // 跟isOpenDialog关联，开启后可配置窗口大小设置
            width : 570,
